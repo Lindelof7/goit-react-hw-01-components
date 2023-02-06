@@ -1,0 +1,17 @@
+.statList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    list-style: none;
+}
+
+.StatsLiItem{
+    display: flex;
+}
+
+.StatsItem{
+    padding: 10px;
+    background-color: pink;
+}
