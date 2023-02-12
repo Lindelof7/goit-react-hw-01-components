@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import css from "./Profile.module.css"
 
-export const Profile = ({ profileData: { username, location, tag, avatar, stats: { followers, views, likes } } }) => {
+export const Profile = ({ username, location, tag, avatar, stats: { followers, views, likes } }) => {
     return (
         <><div >
             <div className={(css.ProfileContainer)}>
@@ -14,7 +14,6 @@ export const Profile = ({ profileData: { username, location, tag, avatar, stats:
                 <p>@{tag}</p>
                 <p>{location}</p>
             </div>
-
             <ul>
                 <div className={(css.listWrap)}>
                     <li className={(css.listEl)}>
@@ -36,15 +35,14 @@ export const Profile = ({ profileData: { username, location, tag, avatar, stats:
 }
 
 Profile.propTypes = {
-    profileData: PropTypes.exact({
-        username: PropTypes.string.isRequired,
-        location: PropTypes.string.isRequired,
-        tag: PropTypes.string.isRequired,
-        avatar: PropTypes.string.isRequired,
-        stats: PropTypes.exact({
-            followers: PropTypes.number.isRequired,
-            views: PropTypes.number.isRequired,
-            likes: PropTypes.number.isRequired,
-        })
-    }).isRequired
+    username: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
+    })
+
 }
